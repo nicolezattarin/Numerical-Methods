@@ -8,6 +8,11 @@
 #define EPSILON_0 8.854e-12 // epsilon zero
 
 class material_point: public position, public particle
+/*
+    * This class represents a material point.
+    * It is a subclass of position and particle, with position and charge.
+    * It has a method to calculate the electric field at a given position.
+*/
 
 {
 public:
@@ -17,8 +22,7 @@ public:
     material_point (double mass, double charge, double x, double y, double z): position(x,y,z), particle(mass,charge){}
     ~material_point(){}
 
-    
-    vector_field electric_field(const position& p) const;
+    vector_field electric_field(const position& p) const; // electric at a given position
 
 };
 

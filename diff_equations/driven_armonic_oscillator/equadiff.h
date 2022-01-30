@@ -1,28 +1,28 @@
-#ifndef __equazionedifferenzialebase_h__
-#define __equazionedifferenzialebase_h__
+#ifndef __diff_eq_base_h__
+#define __diff_eq_base_h__
 
 #include "fvect.h"
 #include "myalgebra.h"
 
 using namespace std;
 
-class equazionedifferenzialebase {
+class diff_eq_base {
 public:
-   virtual vector<double> passo (const vector<double> &x, double t, double h, funzionevettorialebase* v) const = 0;
+   virtual vector<double> step (const vector<double> &x, double t, double h, vect_function_base* v) const = 0;
     
 };
 
-class eulero: public equazionedifferenzialebase {
+class eulero: public diff_eq_base {
  
 public:
-    virtual vector<double> passo (const vector<double> &x, double t, double h, funzionevettorialebase* v) const;
+    virtual vector<double> step (const vector<double> &x, double t, double h, vect_function_base* v) const;
 };
 
-class runge_kutta: public equazionedifferenzialebase {
+class runge_kutta: public diff_eq_base {
 
 public:
-    virtual vector<double> passo (const vector<double> &x, double t, double h, funzionevettorialebase* v) const;
+    virtual vector<double> step (const vector<double> &x, double t, double h, vect_function_base* v) const;
 };
 
-#endif // __equazionedifferenzialebase_h__
+#endif // __diff_eq_base_h__
 

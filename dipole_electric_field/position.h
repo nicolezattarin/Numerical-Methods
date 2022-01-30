@@ -8,6 +8,12 @@ using namespace std;
 #define __position_h__
 
 class position {
+/*
+    * This class represents a position.
+    * It characterizes the x, y, z coordinates.
+    * It has a method to calculate the distance between two positions.
+    * coordinates may be spherical, cartesian or cylindrical.
+*/
     
 public:
     position(): m_x (0), m_y (0), m_z (0){}

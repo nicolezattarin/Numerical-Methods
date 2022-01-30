@@ -5,9 +5,13 @@
 using namespace std;
 
 class particle {
+/*
+    * This class represents a particle.
+    * It characterizes the mass, charge.
+*/
 public:
 
-    particle(); // costruttore default
+    particle(); 
     particle (double mass, double charge); //costruttore argomenti
     ~particle(){}
     

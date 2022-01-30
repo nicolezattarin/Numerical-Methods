@@ -9,11 +9,17 @@
 
 
 int main(int argc, char** argv){
+    /* 
+        * This is the main function.
+        * It creates a material point and a vector field,
+        * and then it plots the electric field in ROOT Cern
+    */
+
     if (argc!= 4) {
         cerr << "Usage "<< argv[0] << " <x> <y> <z> " << endl;
         return 1;
     }
-    
+
     double m_proton = 1.67262192369 *pow(10,-27);
     double m_electron = 9.1093837015 *pow(10,-31);
     double q_electron = -1.602176634*pow(10,-19);
@@ -28,15 +34,15 @@ int main(int argc, char** argv){
     
     vector_field E = e.electric_field(myposition) + p.electric_field(myposition); 
    
-    cout << "Campo Elettrico (" << E.GetFx() << ", " << E.GetFy() << ", " << E.GetFz() << ") " << endl;
-    cout << "Il module del campo elettrico nel punto indicato è " << E.module()<< " V/m"<< endl;
+    cout << "E (" << E.GetFx() << ", " << E.GetFy() << ", " << E.GetFz() << ") " << endl;
+    cout << "|E(x,y,z)|: " << E.module()<< " V/m"<< endl;
 
     //==========================================
     //          trend on z
     //==========================================
 
     TApplication app ("app", 0, 0);
-    TCanvas c1( "E" , "Andamento di E", 600, 400 );
+    TCanvas c1( "E" , "trend of E", 600, 400 );
     TGraph h;
     position x(0,0, 100*charge_distance);
     int i = 0;
@@ -49,7 +55,7 @@ int main(int argc, char** argv){
         i++;
     }
     c1.cd();
-    h.SetTitle("Andamento del campo generato dal dipolo");
+    h.SetTitle("Trend of the dipole electric field");
     h.GetXaxis()->SetTitle("delta [m]");
     h.GetYaxis()->SetTitle("E [V/m]");
     h.SetLineWidth(3);
