@@ -1,6 +1,6 @@
 # Numerical methods to solve physical and mathematical problems
 
-This repository contains C++ classes with the respective examples in order to solve different numerical problems, related both to physics and math itself.
+This repository contains C++ classes with the examples in order to solve different numerical problems, related both to physics and math.
 
 ROOT Cern installation is required to run the code. 
 
