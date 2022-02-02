@@ -14,7 +14,7 @@ public:
 };
 
 //==============================================
-//            SIMPLE ARMONIC OSCILLATOR
+//            SIMPLE HARMONIC OSCILLATOR
 //==============================================
 
 class simple_osc: public vect_function_base {
@@ -50,7 +50,7 @@ private:
 
 
 //==============================================
-//        DRIVEN ARMONIC OSCILLATOR
+//        DRIVEN HARMONIC OSCILLATOR
 //==============================================
 
 class oscillator: public vect_function_base {

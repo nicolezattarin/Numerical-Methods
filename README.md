@@ -28,7 +28,7 @@ An example of solution to the harmonic oscillator with an external force is show
 <img src="figs/driven_harmonic.png"  width="900"/> </p>
 
 
-While the comparison between the two methods is shown in figure below:
+While the comparison between the two methods on the simple oscillator is shown in figure below:
 <p align="center">
 <img src="figs/diffeq.png"  width="900"/> </p>
 
