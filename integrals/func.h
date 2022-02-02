@@ -3,20 +3,20 @@
 #include <cmath>
 using namespace std;
 
-#ifndef __funzione_h__
-#define __funzione_h__
+#ifndef __func_h__
+#define __func_h__
 
-class funzionebase{
+class funcbase{
 public:
 	virtual double eval (double x) const = 0;
 };
 
-class seno: public funzionebase {
+class fsin: public funcbase {
 public:
 	virtual double eval (double x) const;
 };
 
-class f1: public funzionebase {
+class f1: public funcbase {
 public:
     virtual double eval (double x) const{
         return exp(x)+exp(-x);
