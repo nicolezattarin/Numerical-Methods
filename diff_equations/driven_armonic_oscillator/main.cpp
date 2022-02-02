@@ -13,7 +13,7 @@ int main(int argc, char** argv){
     double h = atof(argv[1]);
     
     //==============================================
-    //       graphic solution of the equation
+    //        solution of the equation
     //==============================================
     
     TApplication app ("app", 0, 0);
