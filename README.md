@@ -25,7 +25,12 @@ The folder `diff_equations` provides three examples of usage of Euler and Runge-
 An example of solution to the harmonic oscillator with an external force is shown in figure below:
 
 <p align="center">
-<img src="figs/diffeq.png"  width="600"/> </p>
+<img src="figs/driven_harmonic.png"  width="900"/> </p>
+
+
+While the comparison between the two methods is shown in figure below:
+<p align="center">
+<img src="figs/diffeq.png"  width="900"/> </p>
 
 
 
