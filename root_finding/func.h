@@ -1,20 +1,33 @@
 #include <iostream>
+#include <cstdlib>
 #include <cmath>
 using namespace std;
 
-#ifndef __funzione_h__
-#define __funzione_h__
+#ifndef __func_h__
+#define __func_h__
 
-class funzionebase{
+class funcbase{
 public:
 	virtual double eval (double x) const = 0;
 };
 
-class parabola: public funzionebase {
+class fsin: public funcbase {
 public:
-	parabola();
-	parabola(double a, double b, double c);
-	~parabola();
+	virtual double eval (double x) const;
+};
+
+class f1: public funcbase {
+public:
+    virtual double eval (double x) const{
+        return exp(x)+exp(-x);
+    }
+};
+
+class poldeg2: public funcbase {
+public:
+	poldeg2();
+	poldeg2(double a, double b, double c);
+	~poldeg2();
 
 	virtual double eval (double x) const;
 
@@ -29,11 +42,11 @@ private:
 	double m_c;
 };
 
-class f_tan: public funzionebase {
-    
+class f_tan: public funcbase { 
 public:
     virtual double eval (double x) const;
 };
+
 
 
 #endif

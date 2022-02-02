@@ -1,7 +1,7 @@
-esercizio7.3: esercizio7.3.o funzionebase.o solutore.o
+main: main.o func.o solver.o
 	g++ $^ -o $@
 
-esercizio7.3.o: esercizio7.3.cpp funzionebase.h solutore.h
+main.o: main.cpp func.h solver.h
 	g++ -c $< -o $@
 
 %.o: %.cpp %.h
@@ -9,4 +9,4 @@ esercizio7.3.o: esercizio7.3.cpp funzionebase.h solutore.h
 
 clean:
 	rm *.o
-	rm esercizio7.3
+	rm main
