@@ -8,7 +8,7 @@
 class randomgen{
     
 public:
-    randomgen (unsigned int seed){ //valori dati da box muller
+    randomgen (unsigned int seed){ 
         m_seed = seed;
         m_a = 1664525;
         m_c = 1013904223;
@@ -19,17 +19,16 @@ public:
     void SetM(unsigned int m){m_m = m;}
 
     double rand();
-    double uniforme(double min, double max);
-    double esponenziale(double lambda);
+    double uniform(double min, double max);
+    double exp(double lambda);
     double gauss(double mean, double sigma);
-    double gauss_AR(double mean, double sigma, double a, double b);
+    double gauss_AR(double mean, double sigma, double a, double b); // accept reject
 
 private:
     
     unsigned int m_a, m_c,m_m;
     unsigned int m_seed;
     
-
 };
 
 #endif //__randomgen_h_

@@ -1,22 +1,22 @@
 LIBS:=`root-config --libs`
 INCS:=`root-config --cflags`
 
-esercizio10.2: esercizio10.2.o randomgen.o int_MC.o funzioni.o
-	g++ -std=c++11 esercizio10.2.o randomgen.o int_MC.o funzioni.o ${LIBS} -o esercizio10.2
+main: main.o randomgen.o int_MC.o func.o
+	g++ -std=c++11 main.o randomgen.o int_MC.o func.o ${LIBS} -o main
 
-esercizio10.2_analisi: esercizio10.2_analisi.o
-	g++ -std=c++11 esercizio10.2_analisi.o ${LIBS} -o esercizio10.2_analisi
+main_analysis: main_analysis.o
+	g++ -std=c++11 main_analysis.o ${LIBS} -o main_analysis
 
-esercizio10.2.o: esercizio10.2.cpp randomgen.h int_MC.h funzioni.h
-	g++ -c -std=c++11 esercizio10.2.cpp -o esercizio10.2.o ${INCS} 
+main.o: main.cpp randomgen.h int_MC.h func.h
+	g++ -c -std=c++11 main.cpp -o main.o ${INCS} 
 
-esercizio10.2_analisi.o: esercizio10.2_analisi.cpp
-	g++ -c -std=c++11 esercizio10.2_analisi.cpp -o esercizio10.2_analisi.o ${INCS}
+main_analysis.o: main_analysis.cpp
+	g++ -c -std=c++11 main_analysis.cpp -o main_analysis.o ${INCS}
 
 %.o: %.cpp %.h
 	g++ -c -std=c++11 $< -o $@
 
 clean:
 	rm *.o
-	rm esercizio10.2
-	rm esercizio10.2_analisi
+	rm main
+	rm main_analysis

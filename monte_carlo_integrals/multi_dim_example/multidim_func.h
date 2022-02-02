@@ -1,6 +1,6 @@
 
-#ifndef __funzione_Rn_h__
-#define __funzione_Rn_h__
+#ifndef __func_Rn_h__
+#define __func_Rn_h__
 
 #include <iostream>
 #include <cstdlib>
@@ -9,12 +9,12 @@
 
 using namespace std;
 
-class funzionebase_Rn {
+class funcbase_Rn {
 public:
 	virtual double eval (const vector<double>& x) const = 0;
 };
 
-class f1: public funzionebase_Rn {
+class f1: public funcbase_Rn {
 public:
     virtual double eval (const vector<double>& x) const;
 };
