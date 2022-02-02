@@ -20,14 +20,13 @@ The folder `integrals` provides a class integral and the corresponding methods t
 The example in `main` computes the integral of the function sin(x) in [0,π]. 
 
 ## Differential equations: Euler, Runge-Kutta methods
-The folder `differential_equations` provides a class solver and the corresponding methods to solve differential equations, functions should be implemented as classes inheriting from `funcbase`. We implemented the following methods: Euler, Runge-Kutta, each of which is available both with fixed precision and with fixed number of iterations.
-Ripetere l'esercizio 9.1 con il metodo di risoluzione di equazioni differenziali di Runge-Kutta (del quarto ordine) e confrontare quindi in condizioni analoghe (t massimo e h) la stabilità dei due metodi.
-Per svolgere l'esercizio, basterà realizzare una nuova classe concreta a partire da EquazioneDifferenzialeBase. 
+The folder `diff_equations` provides three examples of usage of Euler and Runge-Kutta methods in physical problems. In particular, we provide a graphical solution to the simple armonic oscillator problem, and to the oscillator in presence of an external force. 
 
-Implementare la risoluzione dell'equazione del pendolo usando i metodi precedentemente implementati. Fare quindi un grafico del periodo di oscillazione e verificare che per angoli grandi le oscillazioni non sono più isocrone.
+An example of solution to the harmonic oscillator with an external force is shown in figure below:
 
+<p align="center">
+<img src="figs/diffeq.png"  width="600"/> </p>
 
-Implementare la risoluzione dell'equazione di un oscillatore armonico smorzato con forzante. Fare quindi un grafico della soluzione stazionaria in funzione della frequenza dell'oscillatore, ricostruendo la curva di risonanza.
 
 
 ## Montecarlo integrals: mean, hit or miss methods
