@@ -18,11 +18,11 @@ int main(){
     vector <double> values_delta1(10000);
     vector <double> values_delta2(10000);
     
-    prisma experiment;
+    prism experiment;
     
     for (int i = 0; i < 10000; ++i){
-        experiment.esegui();
-        experiment.analizza();
+        experiment.execute();
+        experiment.analyze();
         values_A[i] = experiment.get_A();
         values_B[i] = experiment.get_B();
         values_theta0[i] = experiment.get_th0();
@@ -143,12 +143,12 @@ int main(){
     TH2F* delta_correlation = new TH2F ("dbi","residues delta", 100, -0.002, 0.002, 100, -0.002, 0.002 );
     TH2F* n_correlation = new TH2F ("nbi","residues n", 100, -0.001, 0.001, 100, -0.001, 0.001 );
     TH2F* ab_correlation =  new TH2F("ab","residues A, B", 100, -0.004, 0.004, 100, -0.8E-15, 0.8E-15 );
-    TH1F* diffn1 = new TH1F ("diffn1","distribution between the expected and the measured value: n1", 100, 0.001, 0.001 );
-    TH1F* diffn2 = new TH1F ("diffn2","distribution between the expected and the measured value: n2", 100, -0.001, 0.001 );
-    TH1F* diffa =  new TH1F ("sa","distribution between the expected and the measured value: A ", 100, 0.001, 0.001 );
-    TH1F* diffb = new TH1F ("sb","distribution between the expected and the measured value: B", 100, 0.001, 0.001 );
-    TH1F* diffd1 =  new TH1F ("sd1","distribution between the expected and the measured value: delta 1", 100, 0.001, 0.001 );
-    TH1F* diffd2 = new TH1F ("sd2","distribution between the expected and the measured value: delta 2", 100, 0.001, 0.001 );
+    TH1F* diffn1 = new TH1F ("diffn1","distribution differences between the expected and the measured value: n1", 100, 0.001, 0.001 );
+    TH1F* diffn2 = new TH1F ("diffn2","distribution differences between the expected and the measured value: n2", 100, -0.001, 0.001 );
+    TH1F* diffa =  new TH1F ("sa","distribution differences between the expected and the measured value: A ", 100, 0.001, 0.001 );
+    TH1F* diffb = new TH1F ("sb","distribution differences between the expected and the measured value: B", 100, 0.001, 0.001 );
+    TH1F* diffd1 =  new TH1F ("sd1","distribution differences between the expected and the measured value: delta 1", 100, 0.001, 0.001 );
+    TH1F* diffd2 = new TH1F ("sd2","distribution differences between the expected and the measured value: delta 2", 100, 0.001, 0.001 );
     
 
     delta_correlation->StatOverflows(kTRUE);

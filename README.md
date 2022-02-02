@@ -50,3 +50,29 @@ Summing 2 variables we obtain the following distributions:
 Summing 10 variables we obtain the following distributions:
 <p align="center">
 <img src="figs/sum10.png"  width="600"/> </p>
+
+## Simulation of an experiment: prism 
+The folder `simulation` provides an example of usage of the Monte Carlo method to simulate the results of a specific experiment, by using the same structure of the code, the same approach can be generalized to other experiments. 
+
+The refractive index is given by Cauchy relation: n(lambda) = (A + B*lambda^2)^0.5
+The real experiment is based on measuring the refractive index of a prism for different wavelengths, in order to provide an estimation of the parameters A and B.
+
+Our simulation is based on the following steps:
+- method execute: we generate random values for the measurable quantities given a mean and an error (standard deviation);
+- method analyze: we compute all the quantities that should be computed from the measured quantities, exactly as we would do in the real experiment.
+
+We also study the correlation between the measured quantities and the computed quantities and the error of the computed quantities.
+Examples of possible plots are shown in figures below.
+Correlations between residues for different quantities:
+<p align="center">
+<img src="figs/corr.png"  width="900"/> </p>
+
+Distribution of computed quantities:
+<p align="center">
+<img src="figs/mesures.png"  width="900"/> </p>
+
+Distribution of the error of the computed quantities:
+<p align="center">
+<img src="figs/differences_distr.png"  width="900"/> </p>
+
+For further reading, see (in italian): [TNDS lab](http://labmaster.mi.infn.it/Laboratorio2/labTNDS/)
