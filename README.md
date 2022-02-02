@@ -35,25 +35,18 @@ While the comparison between the two methods on the simple oscillator is shown i
 
 
 ## Montecarlo integrals: mean, hit or miss methods
+The folder `montecarlo_integrals` provides examples of how it is possible to compute pseudo-random numbers and how random number generation can be used to compute the integral of a function. 
+In particular, we provide different examples:
+- random_numbers: code that implements generators for uniform, gaussian (Box-Muller and accept-reject) and exponential distributions;
+- central_limit_theorem: code that generates a series of random numbers uniformly distributed in [0,1] and computes the sum over a fixed number of elements, in order to directly verify the central limit theorem;
+- integrals: class to solve the integral of a function using Monte Carlo methods: mean and hit-or-miss.
+- multi_dim_example: example of usage of the Monte Carlo method of the mean in a multi-dimensional problem.
 
-- 
-Scrivere un programma che produca quattro istogrammi contenenti ciascuno 10000 numeri pseudo-casuali estratti da :
-una distribuzione uniforme tra 5 e 10.
-una distribuzione esponenziale tra 0 e + ∞ con costante k=1.
-una distribuzione gaussiana centrata in 1 e larghezza 1 con il metodo di Box-Muller.
-una distribuzione gaussiana centrata in 1 e larghezza 1 con il metodo accept-reject.
+Central limit theorem verification is shown in figures below.
+Summing 2 variables we obtain the following distributions:
+<p align="center">
+<img src="figs/sum2.png"  width="600"/> </p>
 
-- Generare una serie di numeri casuali uniformemente distribuiti in [0,1] e calcolare la somma eseguita su un numero n di elementi consecutivi della serie generata. Calcolare la varianza della serie di numeri generata e della serie delle somme. Verificare che questa scala con n. Passare da riga di comando sia il numero di elementi della serie di partenza (10000 può essere un buon numero) ed il numero di elementi su cui fare la somma. Creare due istogrammi che contengano la distribuzione dei numeri generata e la distribuzione delle somme. Verificare come cambia la distribuzione delle somme al variare di n.
-
-
-- Calcolare 10000 volte il valore dell'integrale di sin(x) tra [0,π] utilizzando il metodo della media a 100 punti e fare un grafico ( istogramma ) della distribuzione dei valori ottenuti.
-Estendere il punto precedente calcolando 10000 volte il valore dell'integrale di sin(x) tra [0,π] utilizzando il metodo della media a N punti con N pari a 100, 500, 1000, 5000, 10000 punti. Per ogni valore di N produrre il grafico della distribuzione dei 10000 valori ottenuti. [NOTA: poichè il calcolo degli integrali con N molto elevato potrebbe richiedere un certo tempo, potrebbe essere utile salvare in diversi files i valori degli integrali calcolati per un determinato N e svolgere i punti successivi con un secondo programma che utilizzi come input i files di integrali del programma precedente.]
-Stimare l'errore sul calcolo dell'integrale a 100, 500, 1000, 5000, 10000 punti come deviazione standard dei 10000 valori calcolati per ogni N. Far un grafico di questo errore in funzione di N.
-Assumendo che l'andamento dell'errore sia noto ( del tipo k/ √N ) si determini quanti punti sono necessari per ottenere una precisione di 0.001. Si ripeta lo stesso lavoro con il metodo hit-or-miss.
-
-
--multidim
-
-
-
-
+Summing 10 variables we obtain the following distributions:
+<p align="center">
+<img src="figs/sum10.png"  width="600"/> </p>
